@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://em44pevrcd1m"]
+
+[ext_resource type="Script" uid="uid://cw3o1fc01fvx5" path="res://script/guild.gd" id="1_30pmo"]
+[ext_resource type="Texture2D" uid="uid://5pt0q7pnp66h" path="res://resources/houses/special_house_a.png" id="1_t038c"]
+[ext_resource type="Script" uid="uid://d4j5yhgyq5m7i" path="res://script/door_teleport.gd" id="3_b41xu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30pmo"]
+size = Vector2(36, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b41xu"]
+size = Vector2(220, 132)
+
+[node name="Guild" type="CharacterBody2D" unique_id=182044241]
+collision_layer = 2
+script = ExtResource("1_30pmo")
+
+[node name="texture" type="Sprite2D" parent="." unique_id=422428399]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_t038c")
+
+[node name="area_detect" type="Area2D" parent="." unique_id=141534337]
+collision_layer = 0
+script = ExtResource("3_b41xu")
+interior_scene = "uid://dwmc8fviqty4g"
+spawn_position = Vector2(450, 15)
+
+[node name="collision" type="CollisionShape2D" parent="area_detect" unique_id=509266170]
+visibility_layer = 2
+position = Vector2(0, 116.5)
+shape = SubResource("RectangleShape2D_30pmo")
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=711877283]
+position = Vector2(0, 56)
+shape = SubResource("RectangleShape2D_b41xu")
+
+[connection signal="body_entered" from="area_detect" to="." method="_on_door_body_entered"]
