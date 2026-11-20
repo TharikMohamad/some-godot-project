@@ -25,6 +25,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if player_ref and event.is_action_pressed("interact"):
 		var world := get_tree().current_scene
 		if is_exit and world.has_method("exit_interior"):
+			get_viewport().set_input_as_handled()
 			world.exit_interior(spawn_position)
 		elif not is_exit and world.has_method("enter_interior"):
+			get_viewport().set_input_as_handled()
 			world.enter_interior(interior_scene, spawn_position)

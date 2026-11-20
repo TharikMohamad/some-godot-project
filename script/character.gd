@@ -106,10 +106,7 @@ func is_path_clear(offset: Vector2) -> bool:
 	query.collide_with_areas = false
 	query.collide_with_bodies = true
 	var result := space_state.intersect_ray(query)
-	
-	if not result.is_empty():
-		return false
-	return true
+	return result.is_empty()
 
 
 func update_input_queue() -> void:
