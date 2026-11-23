@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var animationplayer: AnimationPlayer = $texture/AnimationPlayer
 
-const TILE_SIZE: int = 32
+const TILE_SIZE: int = 16
 const WALK_SPEED: float = 160.0
 const RUN_SPEED: float = 320.0
 const ROLL_SPEED: float = 480.0

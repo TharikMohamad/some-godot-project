@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8gr6dpuawt3r"
-path="res://.godot/imported/fence_gate.png-6918fb2189a9ee5c30554f5612f1c3aa.ctex"
+uid="uid://n44satjim8s7"
+path="res://.godot/imported/tablee.png-5bb109b50c30d77347014c7f0e8fbaf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/fences and stairs/fence_gate.png"
-dest_files=["res://.godot/imported/fence_gate.png-6918fb2189a9ee5c30554f5612f1c3aa.ctex"]
+source_file="res://resources/houses/inside_house/tablee.png"
+dest_files=["res://.godot/imported/tablee.png-5bb109b50c30d77347014c7f0e8fbaf7.ctex"]
 
 [params]
 

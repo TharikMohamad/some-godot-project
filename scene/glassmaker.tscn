@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://biavnamjh5fl2"]
+
+[ext_resource type="Texture2D" uid="uid://daexxvl8iklhb" path="res://resources/NPC and Character/glassmaker/glassmaker.png" id="1_3n4ur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxtlj"]
+size = Vector2(29, 47)
+
+[node name="Glassmaker" type="CharacterBody2D" unique_id=1925955619]
+collision_layer = 2
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=1568764693]
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_3n4ur")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=142031826]
+shape = SubResource("RectangleShape2D_rxtlj")

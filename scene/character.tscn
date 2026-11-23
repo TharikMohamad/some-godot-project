@@ -173,7 +173,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k8rrn"]
-size = Vector2(12, 21.5)
+size = Vector2(12, 5.5)
 
 [node name="character" type="CharacterBody2D" unique_id=506715501]
 collision_mask = 2
@@ -191,7 +191,7 @@ libraries/ = SubResource("AnimationLibrary_d7vt2")
 speed_scale = 0.8
 
 [node name="collision" type="CollisionShape2D" parent="." unique_id=1093839913]
-position = Vector2(0, 8.75)
+position = Vector2(0, 16.75)
 shape = SubResource("RectangleShape2D_k8rrn")
 
 [node name="remote_transform" type="RemoteTransform2D" parent="." unique_id=2145086570]
