@@ -54,7 +54,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		animationplayer.speed_scale = 1.0
 		update_idle_animation()
-
+	
+	if DialogueManager.is_active:
+		update_idle_animation()
+		return
 
 func update_idle_animation() -> void:
 	$texture.flip_h = false

@@ -176,7 +176,7 @@ _data = {
 size = Vector2(12, 5.5)
 
 [node name="character" type="CharacterBody2D" unique_id=506715501]
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_3x35j")
 
 [node name="texture" type="Sprite2D" parent="." unique_id=1455613430]

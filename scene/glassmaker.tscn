@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://biavnamjh5fl2"]
 
 [ext_resource type="Texture2D" uid="uid://daexxvl8iklhb" path="res://resources/NPC and Character/glassmaker/glassmaker.png" id="1_3n4ur"]
+[ext_resource type="Script" uid="uid://ceknp4rvw50h3" path="res://script/npc.gd" id="1_rxtlj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxtlj"]
-size = Vector2(29, 47)
+size = Vector2(40, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kj3w5"]
+size = Vector2(27.333334, 33)
 
 [node name="Glassmaker" type="CharacterBody2D" unique_id=1925955619]
 collision_layer = 2
+script = ExtResource("1_rxtlj")
+npc_id = "glassmaker"
+npc_name = "Glassmaker Master"
+dialogue_lines = Array[String](["Olá, está é a primeira guilda que você entra na vida?", "Que incrivel, serei o primeiro a ter o prazer de finalmente convidar você para passar minha sabedoria.", "Faço de frascos comuns até lupas especializadas em inspeção.", "Apesar de sermos uma guilda pequena, considerada da casta mais baixa da sociedade, servimos TODOS."])
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=1568764693]
 texture_filter = 1
@@ -14,4 +22,13 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_3n4ur")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=142031826]
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_rxtlj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=862956751]
+collision_layer = 4
+
+[node name="Collision" type="CollisionShape2D" parent="Area2D" unique_id=152015746]
+position = Vector2(1.4305115e-06, 16.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_kj3w5")
